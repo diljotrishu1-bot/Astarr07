@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DILJOT 232</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0f2027;
+overflow:hidden;
+}
+
+/* animated particles */
+
+body::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle,#ffffff22 2px,transparent 2px);
+background-size:40px 40px;
+animation:move 20s linear infinite;
+}
+
+@keyframes move{
+0%{transform:translate(0,0)}
+100%{transform:translate(-200px,-200px)}
+}
+
+/* glass card */
+
+.container{
+
+position:relative;
+width:340px;
+padding:40px;
+
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,0.2);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.4),
+inset 0 0 20px rgba(255,255,255,0.2);
+
+color:white;
+
+}
+
+/* logo */
+
+.logo{
+text-align:center;
+font-size:26px;
+margin-bottom:15px;
+}
+
+/* forms */
+
+form{
+display:none;
+}
+
+form.active{
+display:block;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+
+border:none;
+border-radius:8px;
+
+background:rgba(255,255,255,0.2);
+color:white;
+}
+
+input::placeholder{
+color:#ddd;
+}
+
+/* button */
+
+button{
+width:100%;
+padding:10px;
+
+border:none;
+border-radius:8px;
+
+background:#ff2e63;
+color:white;
+
+cursor:pointer;
+}
+
+button:hover{
+background:#ff004c;
+}
+
+.links{
+text-align:center;
+font-size:14px;
+margin-top:10px;
+}
+
+.links a{
+color:white;
+cursor:pointer;
+}
+
+/* social buttons */
+
+.social{
+margin-top:15px;
+}
+
+.social button{
+margin-top:6px;
+background:rgba(255,255,255,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">💎 DILJOT 232</div>
+
+<!-- LOGIN FORM -->
+
+<form id="login" class="active">
+
+<h2>Login</h2>
+
+<input type="text" placeholder="Email / Username">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+<div class="links">
+
+<a href="#">Forgot Password?</a>
+
+<br><br>
+
+Don't have an account?
+<a onclick="showSignup()">Sign Up</a>
+
+</div>
+
+<div class="social">
+
+<button>Login with Google</button>
+
+<button>Login with Facebook</button>
+
+<button>Login with Apple</button>
+
+</div>
+
+</form>
+
+<!-- SIGNUP FORM -->
+
+<form id="signup">
+
+<h2>Create Account</h2>
+
+<input type="text" placeholder="Username">
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button>Create Account</button>
+
+<div class="links">
+
+Already have an account?
+<a onclick="showLogin()">Login</a>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+function showSignup(){
+
+document.getElementById("login").classList.remove("active")
+document.getElementById("signup").classList.add("active")
+
+}
+
+function showLogin(){
+
+document.getElementById("signup").classList.remove("active")
+document.getElementById("login").classList.add("active")
+
+}
+
+</script>
+
+</body>
+</html>
