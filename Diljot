@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Information</title>
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f5f5f5;
+}
+.card{
+background:white;
+padding:20px;
+margin:40px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+img{
+width:150px;
+border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<img src="photo.jpg">
+
+<h2>DILJOT 232</h2>
+
+<p>Name: Diljot</p>
+<p>Country: India</p>
+<p>Hobby: Gaming 🎮</p>
+<p>Instagram: @DILJOT_232</p>
+
+</div>
+
+</body>
+</html>
